@@ -1,0 +1,8 @@
+ARG  CODE_VERSION=latest
+FROM ubuntu:${CODE_VERSION}
+MAINTAINER Lalitsharma
+RUN apt-get update 
+RUN apt-get install -y nginx curl vim
+EXPOSE 80/tcp
+ADD configs/html/index.html /var/www/html/index.html
+ENTRYPOINT service nginx restart && bash

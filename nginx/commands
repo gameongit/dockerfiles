@@ -1,0 +1,5 @@
+1. docker build -t ubuntu/nginx:1 -f dockerfile_nginx_1 .; sleep 10 ; docker run -p 81:80 --name nginx_1 -it ubuntu/nginx:1 /bin/bash
+2. For nginx, default index.html file is /usr/share/nginx/html/index.html and you can copy content to /var/www/html/ folder also.
+3. -d option during docker run command, Runs the contain in background.
+4. docker ps -a
+5. "docker attach 0cd8d5166717" command to bring back a container in foreground.
